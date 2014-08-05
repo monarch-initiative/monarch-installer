@@ -70,4 +70,3 @@ After this is done, run "make prepare-owlsim" from this directory
 
 Note: if you obtained this from github, then you will have to build
 the installer using the Makefile
-
