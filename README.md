@@ -21,10 +21,11 @@ First you need to prepare the input files. From this directory, type:
 
     make prepape-owlsim
 
-Note: if you wish to add custim data, see the notes below
+Note: if you wish to add custom data, see the notes below
 
 Preparation can take over an hour dependending on dataset size, as
-large caches are prepared.
+large caches are prepared. This step does not need to be rerun until
+the data changes again.
 
 Once this step is complete, start the server:
 

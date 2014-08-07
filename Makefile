@@ -5,12 +5,21 @@ all: prepare-owlsim
 prepare-owlsim:
 	cd phenotype-ontologies/server/ && make all
 
-
 # To rebuild the installer:
 
 OWLTOOLS_JAR = owltools/OWLTools-Runner/bin/owltools-runner-all.jar
 
-src: monarch-app/ringojs $(OWLTOOLS_JAR)
+V=1.0.0-rc1
+TGZ=monarch-installer-$(V).tgz
+
+tgz: $(TGZ)
+$(TGZ): downloads builds
+	cd .. && tar --exclude .svn --exclude .git -zcvf  $@ monarch-installer && mv $@ monarch-installer
+
+deploy:
+	scp $(TGZ) cmg@downloads.monarchinitiative.org:/var/www/html/monarch/pub/monarch-installer/
+
+builds: monarch-app/ringojs $(OWLTOOLS_JAR) 
 downloads: monarch-app phenotype-ontologies owltools
 
 monarch-app:
