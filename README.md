@@ -19,7 +19,7 @@ Both run as embedded Jetty.
 
 First you need to prepare the input files. From this directory, type:
 
-    make prepape-owlsim
+    make prepare-owlsim
 
 Note: if you wish to add custom data, see the notes below
 
