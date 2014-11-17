@@ -15,11 +15,21 @@ Two servers need to be installed
 
 Both run as embedded Jetty.
 
+### Setting PATH
+
+You need one executable on your path for the preparation and server
+startup. Assuming you unpacked this distribution in your home
+directory, type
+
+    export PATH="$PATH:~/monarch-installer/owltools/OWLTools-Runner/bin/owltools"
+
+
+
 ### Running OWLSim
 
 First you need to prepare the input files. From this directory, type:
 
-    make prepape-owlsim
+    make prepare-owlsim
 
 Note: if you wish to add custom data, see the notes below
 
